@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    Olá Mundo!
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/imperio.css">
+        <meta charset="UTF-8">
+        <title>Império Imóveis</title>
+    </head>
+    <body>
+        <center><img src="/images/logo.png" class="logo"></center>
+        <div th:insert="fragments/menu.html"></div>
 
-</body>
+        <div class="container bg-dark">
+            <footer class="row row-cols-5 py-5 my-5 border-top ">
+                <div class="col">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <img src="/images/logo.png" class="logo">
+                    </a>
+                    <p class="text-muted">&copy; 2021</p>
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+                    <h5 class="text-light">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5 class="text-light">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5 class="text-light">Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
 </html>
