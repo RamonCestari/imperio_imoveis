@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/imperio.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <title>Império Imóveis</title>
     </head>
     <body>
         <center><img src="/images/logo_menu.png" class="logo"></center>
         <div th:insert="fragments/menu.html"></div>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="height: 450px">
+                <div class="carousel-item active">
+                    <img src="/images/slideshow.jpg" class="d-block w-100 h-100" alt="imperio imoveis">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/slideshow2.png" class="d-block w-100" alt="imagem azul">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/slideshow3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="quadro">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alugar</a>
+                </li>
+            </ul>
+            <div>
+                <select class="form-select" style="width: 25%" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <input type="email" class="form-control" style="width: 75%" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+
+        </div>
+
+
         <div th:insert="fragments/rodape.html"></div>
     </body>
 
