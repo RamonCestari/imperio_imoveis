@@ -35,6 +35,30 @@
     margin: 10px;
     width: 100%;
     text-align: center;
-
 }
+
+.imagem_sobre_nos {
+    width: 60%;
+    margin: 35px 0px;
+}
+
+.p_sobre_nos {
+
+    text-align: center;
+    font-size: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.div_images_align_center {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.images_align {
+    margin: 10px 25px;
+}
+
 

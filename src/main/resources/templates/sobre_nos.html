@@ -9,16 +9,31 @@
         <title>Sobre Nós</title>
     </head>
 
-        <body>
-            <div th:insert="fragments/login.html"></div>
+    <body>
+    <div th:insert="fragments/login.html"></div>
 
-            <center><img src="/images/logo_menu.png" class="logo"></center>
+    <center><img src="/images/logo_menu.png" class="logo"></center>
 
-            <div th:insert="fragments/menu.html"></div>
+    <div th:insert="fragments/menu.html"></div>
 
+        <div class="container">
             <h2 class="titulo_sobre_nos">Sobre Nós</h2>
 
+            <p class="p_sobre_nos">Precisando de uma solução ou querendo investir no mercado imobiliário, conte com a máxima transparência e atenção de corretor especializado.</p>
+            <center><img class="imagem_sobre_nos" src="/images/slideshow.jpg"></center>
+            <p class="p_sobre_nos">Somos especializados na compra, venda e aluguel de imóveis, prestamos toda assessoria necessária à realização de uma transação segura e tranquila, com acompanhamento jurídico e operacional de qualidade.</p>
 
-            <div th:insert="fragments/rodape.html"></div>
-        </body>
+            <div class="div_images_align_center">
+                <img src="/images/facebook_logo.png" class="images_align" alt="Facebook">
+                <img src="/images/facebook_logo.png" class="images_align" alt="Facebook">
+                <img src="/images/facebook_logo.png" class="images_align" alt="Facebook">
+                <img src="/images/facebook_logo.png" class="images_align" alt="Facebook">
+            </div>
+
+            <p class="p_sobre_nos">Reconhecidos pela ética profissional e transparência no mercado imobiliário, oferecemos a nossos clientes um atendimento personalizado, resultando em segurança e satisfação a todos os negócios realizados.</p>
+            <p class="p_sobre_nos">Possuímos profissionais capacitados e diferenciados para uma total eficiência e garantia nas intermediações imobiliárias. Entre em contato, teremos o prazer em ajudá-lo a realizar o sonho de adquirir a casa própria.</p>
+        </div>
+    <div th:insert="fragments/rodape.html"></div>
+
+    </body>
 </html>
