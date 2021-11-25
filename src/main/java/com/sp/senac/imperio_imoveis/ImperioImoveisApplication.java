@@ -1,4 +1,4 @@
-package com.sp.senac.imperio_imoveis.model;
+package com.sp.senac.imperio_imoveis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
