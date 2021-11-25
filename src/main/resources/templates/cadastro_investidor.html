@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/imperio.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <title>Cadastro de investidores</title>
+    </head>
+    <body>
+        <div th:insert="fragments/menu.html"></div>
+        <h1>Cadastro invetidor</h1>
+            <form th:Object="${investidor}" >
+                <label>Razão Social:</label>
+                <input type="text" name="razaoSocial">
+
+                <label>CNPJ::</label>
+                <input type="number" name="cnpj">
+
+                <label>Nome fantasia:</label>
+                <input type="text" name="nomeFantasia">
+
+                <label>Endereço:</label>
+                <input type="text" name="endereco">
+
+                <label>Numero:</label>
+                <input type="text" name="numero">
+
+                <label>Bairro:</label>
+                <input type="text" name="bairro">
+
+                <label>Complemento:</label>
+                <input type="text" name="complemento">
+
+                <label>Telefone:</label>
+                <input type="tel" name="telefone">
+
+                <label>WhatsApp:</label>
+                <input type="tel" name="whats">
+
+                <label>Site:</label>
+                <input type="text" name="site">
+
+                <label>Facebook:</label>
+                <input type="text" name="facebook">
+
+                <button type="submit">Cadastrar</button>
+                <button type="submit">Anexar imagem</button>
+                <button type="submit">Cancelar</button>
+            </form>
+
+        <div th:insert="fragments/rodape.html"></div>
+
+    </body>
+</html>
