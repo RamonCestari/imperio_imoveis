@@ -10,29 +10,30 @@
 <body>
     <div th:insert="fragments/menu.html"></div>
     <h1>Cadastro imóvel</h1>
-    <form th:Object="" >
+    <form th:Object="${pci}" th:Action="@{/cadastrar}" method="post">
         <label>Nome completo do proprietário:</label>
-        <input type="text" name="nomeProprietario">
+        <input type="text" name="nomeProprietario" Id="nomeProprietario" th:field="*{nomeProprietario}">
 
         <label>Email::</label>
-        <input type="text" name="email">
+        <input type="text" name="email" Id="email" th:field="*{email}">
 
         <label>Telefone:</label>
-        <input type="tel" name="telefone">
+        <input type="tel" name="telefone" Id="telefone" th:field="*{telefone}">
 
         <label>Endereço:</label>
-        <input type="text" name="endereco">
+        <input type="text" name="endereco" Id="endereco" th:field="*{endereco}">
 
         <label>Numero:</label>
-        <input type="text" name="numero">
+        <input type="text" name="numero" Id="numero" th:field="*{numero}">
 
         <label>Complemento:</label>
-        <input type="text" name="complemento">
+        <input type="text" name="complemento" Id="complemento" th:field="*{complemento}">
 
         <label>Cidade:</label>
-        <input type="text" name="cidade">
+        <input type="text" name="cidade" Id="cidade" th:field="*{cidade}">
 
-        <label>UF:</label>
+        <label for="uf">UF:</label>
+        <input name="uf" Id="uf" th:field="*{cidade}">
         <select nome = "estados-brasil">
             <option value = "AC"> Acre </option>
             <option value = "AL"> Alagoas </option>
