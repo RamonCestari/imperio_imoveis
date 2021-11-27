@@ -1,6 +1,7 @@
 package com.sp.senac.imperio_imoveis.controller;
 
 import com.sp.senac.imperio_imoveis.DAO.InvestidorDAO;
+import com.sp.senac.imperio_imoveis.DAO.PreCadastroImoveisDAO;
 import com.sp.senac.imperio_imoveis.model.InvestidorEntity;
 import com.sp.senac.imperio_imoveis.model.PreCadastroImovelEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,12 @@ public class PreCadastroImovelController {
         return mv;
     }
 
+    @Autowired
+    private PreCadastroImoveisDAO dao;
 
-    private InvestidorDAO dao;
-
-    @PostMapping("/cadastrar")
-    public String cadastrarInvestidor(@ModelAttribute InvestidorEntity investidor) {
-        //dao.save(investidor);
+    @PostMapping("/cadastrar_pre_cadastro_imovel")
+    public String cadastrarPreCadastroImovel (@ModelAttribute PreCadastroImovelEntity preCadastroImovel) {
+        dao.save(preCadastroImovel);
         return "index";
     }
 }

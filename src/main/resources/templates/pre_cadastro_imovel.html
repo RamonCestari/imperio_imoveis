@@ -7,80 +7,90 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <title>Cadastro de investidores</title>
+    <title>Pré-Cadastro de imóveis</title>
 </head>
 <body>
 <div th:insert="fragments/menu.html"></div>
-<h1>Cadastro imóvel</h1>
-<form th:Object="${pci}" th:Action="@{/cadastrar}" method="post">
-    <label>Nome completo do proprietário:</label>
-    <input type="text" name="nomeProprietario" Id="nomeProprietario" th:field="*{nomeProprietario}">
 
-    <label>Email::</label>
-    <input type="text" name="email" Id="email" th:field="*{email}">
+<h1>Pré-Cadastro de imóveis</h1>
 
-    <label>Telefone:</label>
-    <input type="tel" name="telefone" Id="@{telefone}" th:field="*{telefone}">
+<form th:Object="${pci}" th:Action="@{/cadastrar_pre_cadastro_imovel}" method="post">
 
-    <label>Endereço:</label>
-    <input type="text" name="endereco" Id="@{endereco}" th:field="*{endereco}">
+    <div class="mb-3">
+        <label for="nomeProprietario" class="form-label">Nome completo do proprietário:</label>
+        <input type="text" class="form-control" id="nomeProprietario" aria-describedby="nomeProprietario" th:field="*{nomeProprietario}"/>
 
-    <label>Numero:</label>
-    <input type="text" name="numero" Id="@{numero}" th:field="*{numero}">
+        <label for="email" class="form-label">E-mail:</label>
+        <input type="text" class="form-control" id="email" aria-describedby="email" th:field="*{email}"/>
 
-    <label>Complemento:</label>
-    <input type="text" name="complemento" Id="@{complemento}" th:field="*{complemento}">
+        <label for="telefone" class="form-label">Telefone:</label>
+        <input type="text" class="form-control" id="telefone" aria-describedby="telefone" th:field="*{telefone}"/>
 
-    <label>Cidade:</label>
-    <input type="text" name="cidade" Id="@{cidade}" th:field="*{cidade}">
+        <label for="whatsapp" class="form-label">Whatsapp:</label>
+        <input type="text" class="form-control" id="whatsapp" aria-describedby="whatsapp" th:field="*{whats}"/>
 
-    <label for="@{uf}">UF:</label>
-    <input name="uf" Id="@{uf}" th:field="*{uf}">
-    <datelist Id="@{uf}">
-        <option value="AC"> Acre</option>
-        <option value="AL"> Alagoas</option>
-        <option value="AP"> Amapá</option>
-        <option value="AM"> Amazonas</option>
-        <option value="BA"> Bahia</option>
-        <option value="CE"> Ceará</option>
-        <option value="DF"> Distrito Federal</option>
-        <option value="ES"> Espírito Santo</option>
-        <option value="GO"> Goiás</option>
-        <option value="MA"> Maranhão</option>
-        <option value="MT"> Mato Grosso</option>
-        <option value="MS"> Mato Grosso do Sul</option>
-        <option value="MG"> Minas Gerais</option>
-        <option value="PA"> Pará</option>
-        <option value="PB"> Paraíba</option>
-        <option value="PR"> Paraná</option>
-        <option value="PE"> Pernambuco</option>
-        <option value="PI"> Piauí</option>
-        <option value="RJ"> Rio de Janeiro</option>
-        <option value="RN"> Rio Grande do Norte</option>
-        <option value="RS"> Rio Grande do Sul</option>
-        <option value="RO"> Rondônia</option>
-        <option value="RR"> Roraima</option>
-        <option value="SC"> Santa Catarina</option>
-        <option value="SP"> São Paulo</option>
-        <option value="SE"> Sergipe</option>
-        <option value="TO"> Tocantins</option>
-    </datelist>
+    </div>
 
-    <label>Bairro:</label>
-    <input type="text" name="bairro">
+    <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço:</label>
+        <input type="text" class="form-control" id="endereco" aria-describedby="endereco" th:field="*{endereco}"/>
 
-    <label>CEP:</label>
-    <input type="text" name="cep">
+        <label for="numero" class="form-label">Número:</label>
+        <input type="text" class="form-control" id="numero" aria-describedby="numero" th:field="*{numero}"/>
 
-    <label>Você gostaria de:</label>
-    <span>
-            First checkbox
-            <small class="d-block text-muted">With support text underneath to add more detail</small>
-          </span>
+        <label for="complemento" class="form-label">Complemento:</label>
+        <input type="text" class="form-control" id="complemento" aria-describedby="complemento" th:field="*{complemento}"/>
 
-    <button type="submit">Cadastrar</button>
-    <button type="submit">Anexar imagem</button>
-    <button type="submit">Cancelar</button>
+        <label for="cidade" class="form-label">Cidade:</label>
+        <input type="text" class="form-control" id="cidade" aria-describedby="cidade" th:field="*{cidade}"/>
+
+        <div th:insert="fragments/UFS.html"></div>
+
+    </div>
+
+    <div>
+
+        <label for="bairro" class="form-label">Bairro:</label>
+        <input type="text" class="form-control" id="bairro" aria-describedby="bairro" th:field="*{bairro}"/>
+
+        <label for="cep" class="form-label">CEP:</label>
+        <input type="text" class="form-control" id="cep" aria-describedby="cep" th:field="*{cep}"/>
+
+    </div>
+
+    <div>
+
+        <label>Você gostaria de:</label>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="vender" th:field="*{vender}">
+            <label class="form-check-label" for="vender">Vender</label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" th:field="*{alugar}">
+            <label class="form-check-label" for="flexCheckDefault">Alugar</label>
+        </div>
+
+        <label for="tipo">Tipo de Imóvel:</label>
+        <input name="tipos" list="tipos" Id="tipo" th:field="*{tipoImovel}"/>
+        <datalist Id="tipos">
+            <option value="Apartamento"></option>
+            <option value="Casa"></option>
+            <option value="Terreno"></option>
+        </datalist>
+
+    </div>
+
+    <div>
+
+        <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
+        <button type="button" class="btn btn-outline-secondary">Cancelar</button>
+
+    </div>
+
+
+
 </form>
 
 <div th:insert="fragments/rodape.html"></div>

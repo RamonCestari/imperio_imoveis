@@ -1,12 +1,43 @@
 package com.sp.senac.imperio_imoveis.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="pre_cadastro_imovel")
+
 public class PreCadastroImovelEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private int id;
+    @Column
     private String nomeProprietario, email;
+    @Column
     private int telefone, whats;
+    @Column
     private String endereco, numero, complemento;
+    @Column
     private String cidade, uf, bairro;
+    @Column
     private int cep;
+    @Column
+    private String tipoImovel;
+    @Column
+    private Boolean alugar;
+    @Column
+    private Boolean vender;
+
+    public PreCadastroImovelEntity() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNomeProprietario() {
         return nomeProprietario;
@@ -94,6 +125,30 @@ public class PreCadastroImovelEntity {
 
     public void setCep(int cep) {
         this.cep = cep;
+    }
+
+    public String getTipoImovel() {
+        return tipoImovel;
+    }
+
+    public void setTipoImovel(String tipoImovel) {
+        this.tipoImovel = tipoImovel;
+    }
+
+    public Boolean getAlugar() {
+        return alugar;
+    }
+
+    public void setAlugar(Boolean alugar) {
+        this.alugar = alugar;
+    }
+
+    public Boolean getVender() {
+        return vender;
+    }
+
+    public void setVender(Boolean vender) {
+        this.vender = vender;
     }
 
     @Override
