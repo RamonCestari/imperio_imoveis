@@ -10,15 +10,18 @@
     <title>Pré-Cadastro de imóveis</title>
 </head>
 <body>
-<div th:insert="fragments/menu.html"></div>
+    <div th:insert="fragments/login.html"></div>
+    <center><img src="/images/logo_menu.png" class="logo"></center>
+    <div th:insert="fragments/menu.html"></div>
 
-<h1>Pré-Cadastro de imóveis</h1>
+    <h1>Pré-Cadastro de imóveis</h1>
 
 <form th:Object="${pci}" th:Action="@{/cadastrar_pre_cadastro_imovel}" method="post">
 
     <div class="mb-3">
         <label for="nomeProprietario" class="form-label">Nome completo do proprietário:</label>
-        <input type="text" class="form-control" id="nomeProprietario" aria-describedby="nomeProprietario" th:field="*{nomeProprietario}"/>
+        <input type="text" class="form-control" id="nomeProprietario" aria-describedby="nomeProprietario"
+               th:field="*{nomeProprietario}"/>
 
         <label for="email" class="form-label">E-mail:</label>
         <input type="text" class="form-control" id="email" aria-describedby="email" th:field="*{email}"/>
@@ -39,7 +42,8 @@
         <input type="text" class="form-control" id="numero" aria-describedby="numero" th:field="*{numero}"/>
 
         <label for="complemento" class="form-label">Complemento:</label>
-        <input type="text" class="form-control" id="complemento" aria-describedby="complemento" th:field="*{complemento}"/>
+        <input type="text" class="form-control" id="complemento" aria-describedby="complemento"
+               th:field="*{complemento}"/>
 
         <label for="cidade" class="form-label">Cidade:</label>
         <input type="text" class="form-control" id="cidade" aria-describedby="cidade" th:field="*{cidade}"/>
@@ -88,7 +92,6 @@
         <button type="button" class="btn btn-outline-secondary">Cancelar</button>
 
     </div>
-
 
 
 </form>
