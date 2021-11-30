@@ -30,4 +30,10 @@ public class PreCadastroImovelController {
         dao.save(preCadastroImovel);
         return "index";
     }
+
+    @GetMapping("/listar_pre_cadastro_imovel")
+    public String paginaListarPreCadastroImovel(){
+        return "listar_pre_cadastro_imovel";
+    }
+
 }
