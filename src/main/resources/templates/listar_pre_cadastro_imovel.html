@@ -12,10 +12,42 @@
     <body>
 
         <div th:insert="fragments/login.html"></div>
-        <div th:insert="fragments/rodape.html"></div>
+
+        <center><img src="/images/logo_menu.png" class="logo"></center>
         <div th:insert="fragments/menu.html"></div>
 
-        <h1>Lista de Pré-Cadastro de Imóveis</h1>
+        <div class="container">
+            <h1>Lista de Pré-Cadastro de Imóveis</h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Completo</th>
+                        <th>Contato</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="pci : ${lpci}">
+                        <td th:text="${pci.id}"></td>
+                        <td th:text="${pci.nomeProprietario}"></td>
+                        <td th:text="${pci.whats}"></td>
+                        <td>
+                            <a href="/completa_cadastro_imovel" class="btn btn-primary">Completa Cadastro</a>
+                            <a th:href="@{/editar_pre_cadastro_imovel/{id} (id = ${pci.id})}" class="btn btn-warning">Editar</a>
+                            <a th:href="@{/excluir_pre_cadastro_imovel/{id} (id = ${pci.id})}" class="btn btn-danger">Excluir</a>
+
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+
 
 
         <div th:insert="fragments/rodape.html"></div>

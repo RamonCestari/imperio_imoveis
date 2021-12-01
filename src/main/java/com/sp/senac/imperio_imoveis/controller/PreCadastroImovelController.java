@@ -6,10 +6,14 @@ import com.sp.senac.imperio_imoveis.model.InvestidorEntity;
 import com.sp.senac.imperio_imoveis.model.PreCadastroImovelEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 public class PreCadastroImovelController {
@@ -26,14 +30,29 @@ public class PreCadastroImovelController {
     private PreCadastroImoveisDAO dao;
 
     @PostMapping("/cadastrar_pre_cadastro_imovel")
-    public String cadastrarPreCadastroImovel (@ModelAttribute PreCadastroImovelEntity preCadastroImovel) {
+    public ModelAndView cadastrarPreCadastroImovel (@ModelAttribute PreCadastroImovelEntity preCadastroImovel) {
         dao.save(preCadastroImovel);
-        return "index";
+        return paginaListarPreCadastroImovel();
     }
 
     @GetMapping("/listar_pre_cadastro_imovel")
-    public String paginaListarPreCadastroImovel(){
-        return "listar_pre_cadastro_imovel";
+    public ModelAndView paginaListarPreCadastroImovel() {
+        List<PreCadastroImovelEntity> lista = dao.findAll();
+        ModelAndView mv = new ModelAndView("listar_pre_cadastro_imovel");
+        mv.addObject("lpci", lista );
+        return mv;
+    }
+
+    @GetMapping("/excluir_pre_cadastro_imovel/{id}")
+    public ModelAndView excluir(@PathVariable int id) {
+        dao.deleteById(id);
+        return paginaListarPreCadastroImovel();
+    }
+
+    @GetMapping("editar_pre_cadastro_imovel/{id}")
+    public ModelAndView editar(@PathVariable int id) {
+        PreCadastroImovelEntity preCadastroImovelEntity = dao.findById(id).get();
+        return preCadastroImovel(preCadastroImovelEntity);
     }
 
 }

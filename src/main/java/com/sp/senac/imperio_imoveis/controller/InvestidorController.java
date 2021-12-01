@@ -21,6 +21,7 @@ public class InvestidorController {
     //@Autowired
 
     public InvestidorDAO dao;
+
     @PostMapping("/salvar_cadastro_investidor")
     public String cadastroInvestidor (@ModelAttribute InvestidorEntity cadastroInvestidor){
        // dao.save(cadastroInvestidor);
