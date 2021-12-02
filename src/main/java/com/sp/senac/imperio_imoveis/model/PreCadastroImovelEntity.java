@@ -1,6 +1,7 @@
 package com.sp.senac.imperio_imoveis.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="pre_cadastro_imovel")
@@ -27,6 +28,8 @@ public class PreCadastroImovelEntity {
     private Boolean alugar;
     @Column
     private Boolean vender;
+    @OneToMany
+    private List<ImagemPreCadastroImovelEntity> imagens;
 
     public PreCadastroImovelEntity() {
     }

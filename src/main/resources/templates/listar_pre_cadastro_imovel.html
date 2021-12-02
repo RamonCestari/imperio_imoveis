@@ -35,7 +35,7 @@
                         <td th:text="${pci.nomeProprietario}"></td>
                         <td th:text="${pci.whats}"></td>
                         <td>
-                            <a href="/completa_cadastro_imovel" class="btn btn-primary">Completa Cadastro</a>
+                            <a th:href="@{/imagem_pre_cadastro_imovel/{id} (id = ${pci.id})}" class="btn btn-primary">Completa Cadastro</a>
                             <a th:href="@{/editar_pre_cadastro_imovel/{id} (id = ${pci.id})}" class="btn btn-warning">Editar</a>
                             <a th:href="@{/excluir_pre_cadastro_imovel/{id} (id = ${pci.id})}" class="btn btn-danger">Excluir</a>
 
