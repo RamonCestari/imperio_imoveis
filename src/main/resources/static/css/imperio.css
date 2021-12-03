@@ -67,4 +67,44 @@
     margin: 10px 25px;
 }
 
+#fundo_investidor {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 200px;
+    border-radius: 5px;
+}
 
+#investidor {
+    color: #fff;
+    font-weight: 100;
+    font-family: arial;
+}
+
+#fundo_carrossel {
+    height: 400px;
+    background: linear-gradient(90deg, #E5E5E5 50%, rgba(224, 224, 224, 0.484375) 76.71%, rgba(222, 222, 222, 0.354167) 83.46%, rgba(220, 220, 220, 0.15625) 93.71%, rgba(219, 219, 219, 0) 101.81%);
+    background-color: black;
+    width: 100%;
+    display: flex;
+}
+
+#barra {
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    margin-left: 30%;
+
+}
+
+#barra_nomes {
+
+}
+
+.investidores {
+    text-align: center;
+    background-color: white;
+    width: 200px;
+    flex-direction: space-between;
+}
