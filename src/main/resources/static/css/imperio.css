@@ -84,8 +84,7 @@
 
 #fundo_carrossel {
     height: 400px;
-    background: linear-gradient(90deg, #E5E5E5 50%, rgba(224, 224, 224, 0.484375) 76.71%, rgba(222, 222, 222, 0.354167) 83.46%, rgba(220, 220, 220, 0.15625) 93.71%, rgba(219, 219, 219, 0) 101.81%);
-    background-color: black;
+    background: linear-gradient(70deg, #000 35%, rgba(224, 224, 224, 0.484375) 76.71%, rgba(222, 222, 222, 0.354167) 83.46%, rgba(220, 220, 220, 0.15625) 93.71%, rgba(219, 219, 219, 0) 101.81%);
     width: 100%;
     display: flex;
 }
@@ -93,13 +92,8 @@
 #barra {
     width: 5px;
     height: 100%;
-    background-color: black;
+    background-color: #e9ecef;
     margin-left: 30%;
-
-}
-
-#barra_nomes {
-
 }
 
 .investidores {
@@ -107,4 +101,26 @@
     background-color: white;
     width: 200px;
     flex-direction: space-between;
+}
+
+.mar-10-10 {
+    width:100%;
+    margin-top:2%;
+    margin-bottom:2%;
+    display:-webkit-box;
+}
+
+.margem-35 {
+    margin-left:35%
+    float: right;
+}
+
+.group:after {
+    clear: both;
+}
+
+.cem-percent{
+    width: 100%;
+    margin-left:4%;
+    margin-right:4%;
 }
