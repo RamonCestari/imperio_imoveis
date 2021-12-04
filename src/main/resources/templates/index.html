@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/imperio.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <meta charset="UTF-8">
+<head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/imperio.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
 
-        <title>Império Imóveis</title>
-    </head>
+    <title>Império Imóveis</title>
+</head>
 
-    <body>
+<body>
 
-        <div th:insert="fragments/login.html"></div>
+<div th:insert="fragments/login.html"></div>
 
-        <center><img src="/images/logo_menu.png" class="logo"></center>
+<center><img src="/images/logo_menu.png" class="logo"></center>
 
-        <div th:insert="fragments/menu.html"></div>
-        <div th:insert="fragments/carrossel.html"></div>
-
-
-
-        <div class="quadro">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Comprar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Alugar</a>
-                </li>
-            </ul>
-
-            <div>
-                <select class="form-select" style="width: 50%" aria-label="Default select example">
-                    <option selected>Abra e selecione uma opção.</option>
-                    <option value="1">Terreno</option>
-                    <option value="2">Casa</option>
-                    <option value="3">Apartamento</option>
-                </select>
-
-                <input type="text" class="form-control" style="width: 75%" id="exampleFormControlInput1" placeholder="Ex: Rua Ari Thomazini">
-            </div>
-        </div>
-        <div th:insert="fragments/rodape_imoveis.html"></div>
+<div th:insert="fragments/menu.html"></div>
+<div th:insert="fragments/carrossel.html"></div>
 
 
-        <div th:insert="fragments/rodape.html"></div>
-    </body>
+<div class="quadro">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Comprar</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Alugar</a>
+        </li>
+    </ul>
+
+    <div>
+        <select class="form-select" style="width: 50%" aria-label="Default select example">
+            <option selected>Abra e selecione uma opção.</option>
+            <option value="1">Terreno</option>
+            <option value="2">Casa</option>
+            <option value="3">Apartamento</option>
+        </select>
+
+        <input type="text" class="form-control" style="width: 75%" id="exampleFormControlInput1"
+               placeholder="Ex: Rua Ari Thomazini">
+    </div>
+
+</div>
+        <div th:insert="fragments/carrossel_imoveis.html"></div> <!--Carrossel dos investidores-->
+            <h2 class="visitados fundo_generico">Mais Visitados</h2>
+        <div th:insert="fragments/carrossel_imoveis.html"></div> <!--Carrossel dos imóveis mais Visitados-->
+            <h2 class="casas fundo_generico">Casas</h2>
+        <div th:insert="fragments/carrossel_imoveis.html"></div> <!--Carrossel dos imóveis mais Casas-->
+            <h2 class="apartamentos fundo_generico">Apartamentos</h2>
+        <div th:insert="fragments/carrossel_imoveis.html"></div> <!--Carrossel dos imóveis mais Apartamentos-->
+            <h2 class="terreno fundo_generico">Terrenos</h2>
+        <div th:insert="fragments/carrossel_imoveis.html"></div> <!--Carrossel dos imóveis mais Terrenos-->
+
+<div th:insert="fragments/rodape.html"></div>
+</body>
 
 </html>
