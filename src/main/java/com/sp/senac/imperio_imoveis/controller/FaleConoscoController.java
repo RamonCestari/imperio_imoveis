@@ -30,6 +30,4 @@ public class FaleConoscoController {
         return cadastroFaleConosco(faleConosco);
     }
 
-
-
 }
