@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/imperio.css">
+    <meta charset="UTF-8">
+    <title>Fale conosco</title>
+</head>
+<body>
+    <div th:insert="fragments/login.html"></div>
+
+    <center><img src="/images/logo_menu.png" class="logo"></center>
+
+    <div th:insert="fragments/menu.html"></div>
+
+    <h2 class="titulo_fale_conosco">Fale Conosco</h2>
+
+    <div class="container">
+
+        <br>
+
+        <p class="p_fale_conosco">Endereço:</p>
+
+        <p class="p_fale_conosco">Rua São Bento, 700 - Sala 74, Centro - Araraquara/SP, 14801-300</p>
+
+        <center><img class="imagem_fale_conosco" src="/images/Maps.png"></center>
+
+        <p class="p_fale_conosco">Entre em contato:</p>
+
+        <form th:Object="${fcn}" th:Action="@{/fale_conosco}" method="post">
+
+        <p calss="p_fale_conosco">Nome:</p>
+        <input type="text" class="form-control" style="width: 75%" id="Nome"
+               placeholder="Digite seu Nome Completo" th:field="*{nomeCliente}">
+
+        <p calss="p_fale_conosco">E-mail:</p>
+        <input type="text" class="form-control" style="width: 75%" id="email"
+               placeholder="Ex.: alex.silva@gmail.com" th:field="*{emailCliente}">
+
+        <p calss="p_fale_conosco">Mensagem</p>
+        <input type="text" class="form-control" style="width: 75%" id="Mensagem"
+               placeholder="Digite sua mensagem" th:field="*{mensagemCliente}">
+
+        <p calss="p_fale_conosco">Telefone</p>
+        <input type="text" class="form-control" style="width: 75%" id="Telefone"
+               placeholder="(16)99999-9999" th:field="*{telefoneCliente}">
+
+        <button type="submit" class="btn btn-outline-secondary m-1">Enviar</button>
+        </form>
+    </div>
+
+    <div th:insert="fragments/rodape.html"></div>
+
+</body>
+</html>
