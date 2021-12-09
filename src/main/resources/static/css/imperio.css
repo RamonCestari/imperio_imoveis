@@ -128,3 +128,19 @@
     margin-left:4%;
     margin-right:4%;
 }
+
+.button_como_chegar{
+
+background: #020202;
+border-radius: 10px;
+width: 225px;
+height: 33px;
+left: 307px;
+top: 667px;
+
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 33px;
+text-align: center;
+}

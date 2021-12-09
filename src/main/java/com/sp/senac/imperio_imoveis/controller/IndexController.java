@@ -21,5 +21,10 @@ public class IndexController {
         return "financie";
     }
 
+    @GetMapping("/fale_conosco")
+    public String paginaFaleConosco(){
+        return "fale_conosco";
+    }
+
 
 }
