@@ -28,20 +28,20 @@
             <!--Google Maps-->
         </div>
         <h2>Entre em contato:</h2>
-        <form th:Object="${fc}">
+        <form th:Object="${fcn}" th:action="@{/fale_conosco}" method="post">
             <label for="nome" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="nome" aria-describedby="nome" th:field="*{nome}"/>
+            <input type="text" class="form-control" id="nome" aria-describedby="nome" th:field="*{nomeCliente}"/>
 
-            <label for="email" class="form-label">Email:</label>
-            <input type="text" class="form-control" id="email" aria-describedby="email" th:field="*{email}"/>
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="text" class="form-control" id="email" aria-describedby="email" th:field="*{emailCliente}"/>
 
             <label for="mensagem" class="form-label">Mensagem:</label>
-            <input type="text" class="form-control" id="mensagem" aria-describedby="mensagem" th:field="*{mensagem}"/>
+            <input type="text" class="form-control" id="mensagem" aria-describedby="mensagem" th:field="*{mensagemCliente}"/>
 
             <label for="telefone" class="form-label">Telefone:</label>
-            <input type="text" class="form-control" id="telefone" aria-describedby="telefone" th:field="*{telefone}"/>
+            <input type="text" class="form-control" id="telefone" aria-describedby="telefone" th:field="*{telefoneCliente}"/>
 
-            <button type="submit" class="btn btn-outline-secondary">Enviar</button>
+            <button type="submit" class="btn btn-outline-secondary m-1">Enviar</button>
         </form>
 
         <div th:insert="fragments/rodape.html"></div>
