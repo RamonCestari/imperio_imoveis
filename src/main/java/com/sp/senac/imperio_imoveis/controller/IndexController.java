@@ -19,5 +19,8 @@ public class IndexController {
         return "financie";
     }
 
-
+    @GetMapping("/teste")
+    public String teste(){
+        return "teste";
+    }
 }
