@@ -2,7 +2,6 @@ package com.sp.senac.imperio_imoveis.controller;
 
 import com.sp.senac.imperio_imoveis.DAO.InvestidorDAO;
 import com.sp.senac.imperio_imoveis.model.InvestidorEntity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,7 +23,7 @@ public class InvestidorController {
 
     @PostMapping("/salvar_cadastro_investidor")
     public String cadastroInvestidor (@ModelAttribute InvestidorEntity cadastroInvestidor){
-       // dao.save(cadastroInvestidor);
+        dao.save(cadastroInvestidor);
         return "index";
     }
 

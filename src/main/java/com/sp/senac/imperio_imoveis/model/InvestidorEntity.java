@@ -2,17 +2,35 @@ package com.sp.senac.imperio_imoveis.model;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "cadastro_investidores")
 public class InvestidorEntity {
 
+    @Id
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @Column
     private String razaoSocial;
+    @Column
     private String nomeFantasia;
+    @Column
     private int cnpj;
+    @Column
     private String endereco, numero;
+    @Column
     private String bairro, complemento;
+    @Column
     private int telefone, Whats;
+    @Column
     private String site, facebook;
+
+
+    public InvestidorEntity() {
+    }
 
     public int getId() {
         return id;
